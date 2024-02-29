@@ -1,11 +1,29 @@
 import PageWrapper from "@/app/_components/page-wrapper/PageWrapper";
 import Link from "next/link";
 import React from "react";
+import { getGoodById, goods } from "@/app/products/_data/goods";
 
-const Good = (props: { params: { categoryId: string; goodId: string } }) => {
+export const generateStaticParams = () => {
+  return goods
+    .filter((_, i) => i < 5)
+    .map(({ id, categoryId }) => ({
+      goodId: String(id),
+      categoryId: String(categoryId),
+    }));
+};
+
+const Good = async (props: {
+  params: { categoryId: string; goodId: string };
+}) => {
   const {
     params: { categoryId, goodId },
   } = props;
+
+  const goodDetails = await getGoodById(goodId);
+
+  if (!goodDetails) {
+    return "No good details";
+  }
 
   return (
     <PageWrapper>
