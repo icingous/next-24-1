@@ -26,6 +26,7 @@ export default function AuthLayout({
               Products
             </Link>
             <Link href="/dashboard">Dashboard</Link>
+            <Link href="/landing">Landing</Link>
           </div>
           <div className="flex gap-2">
             <Link href="/login">Login</Link>
