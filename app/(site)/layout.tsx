@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import Link from "next/link";
+import LocaleSwitch from "../_components/page-wrapper/LocaleSwitch";
 import "../globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -14,7 +15,7 @@ export async function generateStaticParams() {
   return [{ lang: "en-US" }, { lang: "uk-UA" }];
 }
 
-export default function AuthLayout({
+export default function SiteLayout({
   children,
   params,
 }: Readonly<{
@@ -31,6 +32,9 @@ export default function AuthLayout({
             <Link href="/products">Products</Link>
             <Link href="/dashboard">Dashboard</Link>
             <Link href="/landing">Landing</Link>
+          </div>
+          <div>
+            <LocaleSwitch />
           </div>
           <div className="flex gap-2">
             <Link href="/login">Login</Link>

@@ -19,3 +19,11 @@ export const getGoodById = (id: string) =>
   new Promise<Good | undefined>((resolve) =>
     setTimeout(() => resolve(goods.find((item) => item.id === id)), 2000)
   );
+
+export const getGoodsByCategoryId = (id: string) =>
+  new Promise<Good[]>((resolve) =>
+    setTimeout(
+      () => resolve(goods.filter((item) => item.categoryId === id)),
+      2000
+    )
+  );

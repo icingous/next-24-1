@@ -1,0 +1,10 @@
+{
+  "common": {
+    "welcome": "Welcome"
+  },
+  "pages": {
+    "landing": {
+      "greeting": "Glory to Ukraine!"
+    }
+  }
+}

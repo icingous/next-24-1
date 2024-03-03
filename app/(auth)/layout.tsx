@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "../globals.css";
 import Link from "next/link";
+import LocaleSwitch from "../_components/page-wrapper/LocaleSwitch";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -18,8 +19,9 @@ export default function AuthLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <div className="p-3 flex gap-2 bg-slate-500 text-white">
+        <div className="p-3 flex justify-between gap-2 bg-slate-500 text-white">
           <Link href="/">Home</Link>
+          <LocaleSwitch />
         </div>
         {children}
       </body>

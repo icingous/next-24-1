@@ -1,6 +1,6 @@
 import Link from "next/link";
 import React from "react";
-import PageWrapper from "../_components/page-wrapper/PageWrapper";
+import PageWrapper from "../../_components/page-wrapper/PageWrapper";
 import { categories } from "./_data/categories";
 
 function Catalog() {
