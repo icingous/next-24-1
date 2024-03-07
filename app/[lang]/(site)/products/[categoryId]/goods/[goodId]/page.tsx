@@ -1,7 +1,7 @@
-import PageWrapper from "@/app/_components/page-wrapper/PageWrapper";
+import PageWrapper from "@/app/components/page-wrapper/PageWrapper";
 import Link from "next/link";
 import React from "react";
-import { getGoodById, goods } from "../../../_data/goods";
+import { getGoodById, goods } from "../../../data/goods";
 
 export const generateStaticParams = () => {
   return goods
