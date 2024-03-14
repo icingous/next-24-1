@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import Link from "next/link";
-import LocaleSwitch from "../../components/page-wrapper/LocaleSwitch";
+import LocaleSwitch from "../../components/LocaleSwitch";
 import "../../globals.css";
 import { Locale } from "@/i18n-config";
 

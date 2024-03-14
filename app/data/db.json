@@ -1,0 +1,124 @@
+{
+  "category": [
+    {
+      "id": 1,
+      "alias": "yachts",
+      "name": "Yachts",
+      "image": "/img/yachts.jpeg"
+    },
+    {
+      "id": 2,
+      "alias": "cars",
+      "name": "Cars",
+      "image": "/img/cars.jpeg"
+    },
+    {
+      "id": 3,
+      "alias": "motorbikes",
+      "name": "Motorbikes",
+      "image": "/img/motorbikes.jpeg"
+    },
+    {
+      "id": 4,
+      "alias": "bicycles",
+      "name": "Bicycles",
+      "image": "/img/bicycles.jpeg"
+    }
+  ],
+  "product": [
+    {
+      "id": "1",
+      "categoryId": "2",
+      "name": "Toyota Rav4",
+      "make": "2",
+      "color": "1",
+      "price": 234.11
+    },
+    {
+      "id": "2",
+      "categoryId": "2",
+      "name": "Toyota Corolla",
+      "make": "2",
+      "color": "2",
+      "price": 10987.0
+    },
+    {
+      "id": "3",
+      "categoryId": "2",
+      "name": "Audi Q7",
+      "make": "1",
+      "price": 654.35
+    },
+    {
+      "id": "4",
+      "categoryId": "2",
+      "name": "Audi Q5",
+      "make": "1",
+      "price": 876.99
+    }
+  ],
+  "make": [
+    {
+      "id": "1",
+      "alias": "audi",
+      "name": "Audi"
+    },
+    {
+      "id": "2",
+      "alias": "toyota",
+      "name": "Toyota"
+    }
+  ],
+  "car": [
+    {
+      "id": "1",
+      "name": "Toyota Rav4",
+      "make": "2",
+      "color": "1"
+    },
+    {
+      "id": "2",
+      "name": "Toyota Corolla",
+      "make": "2",
+      "color": "2"
+    },
+    {
+      "id": "3",
+      "name": "Audi Q7",
+      "make": "1"
+    },
+    {
+      "id": "4",
+      "name": "Audi Q5",
+      "make": "1"
+    }
+  ],
+  "color": [
+    {
+      "id": "1",
+      "name": "white",
+      "value": "bg-white"
+    },
+    {
+      "id": "2",
+      "name": "red",
+      "value": "bg-red-500"
+    },
+    {
+      "id": "3",
+      "name": "green",
+      "value": "bg-green-500"
+    },
+    {
+      "id": "4",
+      "name": "blue",
+      "value": "bg-sky-500"
+    },
+    {
+      "id": "5",
+      "name": "black",
+      "value": "bg-gray-900"
+    }
+  ]
+}
+

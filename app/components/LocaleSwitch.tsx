@@ -1,5 +1,12 @@
 "use client";
 
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 import { useRouter, usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { i18n, Locale } from "@/i18n-config";
@@ -27,17 +34,18 @@ const LocaleSwitch = (
   }, [locale, pathname, router]);
 
   return (
-    <select
-      value={locale}
-      className="text-black"
-      onChange={(e) => setLocale(e.target.value as Locale)}
+    <Select
+      onValueChange={(value: Locale) => setLocale(value as Locale)}
+      defaultValue={locale}
     >
-      {locales.map((locale) => (
-        <option key={locale} value={locale}>
-          {locale.toUpperCase()}
-        </option>
-      ))}
-    </select>
+      <SelectTrigger className="w-[150px]">
+        <SelectValue placeholder="UI language" />
+      </SelectTrigger>
+      <SelectContent>
+        <SelectItem value="uk">UK Українська</SelectItem>
+        <SelectItem value="en">EN English</SelectItem>
+      </SelectContent>
+    </Select>
   );
 };
 
