@@ -1,9 +1,13 @@
-import { type CategoryEntity } from "@/app/data/db-types";
+import { type CategoryEntity } from '@/app/data/db-types';
 
 export const getProductCategories = async (): Promise<
   CategoryEntity[] | null
 > => {
-  const res = await fetch(`${process.env.API_BASE_PATH}/category`);
+  const res = await fetch(`${process.env.API_BASE_PATH}/category`, {
+    next: {
+      tags: ['categories'],
+    },
+  });
 
   if (!res.ok) return null;
 

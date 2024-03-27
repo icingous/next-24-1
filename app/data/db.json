@@ -1,28 +1,34 @@
 {
   "category": [
     {
-      "id": 1,
+      "id": "1",
       "alias": "yachts",
       "name": "Yachts",
       "image": "/img/yachts.jpeg"
     },
     {
-      "id": 2,
+      "id": "2",
       "alias": "cars",
       "name": "Cars",
       "image": "/img/cars.jpeg"
     },
     {
-      "id": 3,
+      "id": "3",
       "alias": "motorbikes",
       "name": "Motorbikes",
       "image": "/img/motorbikes.jpeg"
     },
     {
-      "id": 4,
+      "id": "4",
       "alias": "bicycles",
       "name": "Bicycles",
       "image": "/img/bicycles.jpeg"
+    },
+    {
+      "id": null,
+      "name": "Проф",
+      "alias": "prof",
+      "image": "/img/something.webp"
     }
   ],
   "product": [
@@ -40,7 +46,7 @@
       "name": "Toyota Corolla",
       "make": "2",
       "color": "2",
-      "price": 10987.0
+      "price": 10987
     },
     {
       "id": "3",
@@ -121,4 +127,3 @@
     }
   ]
 }
-

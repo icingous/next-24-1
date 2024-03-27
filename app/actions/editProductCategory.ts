@@ -3,7 +3,7 @@
 import { ActionState } from './types';
 import { revalidateTag } from 'next/cache';
 
-export const addProductCategory = async (
+export const editProductCategory = async (
   state: ActionState,
   formData: FormData
 ): Promise<ActionState> => {
@@ -13,13 +13,12 @@ export const addProductCategory = async (
   const name = formData.get('name');
   const alias = formData.get('alias');
 
-  const res = await fetch(`${process.env.API_BASE_PATH}/category`, {
-    method: 'POST',
+  const res = await fetch(`${process.env.API_BASE_PATH}/category/${id}`, {
+    method: 'PUT',
     body: JSON.stringify({
       id,
       name,
       alias,
-      image: '/img/something.webp',
     }),
   });
 

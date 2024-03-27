@@ -1,19 +1,19 @@
-import { CarEntity } from "@/db-types";
+import { CarEntity } from '@/app/data/db-types';
 
 export async function getCarsByMakeId(
   id: string,
   filters?: {
     color?: string;
-  },
+  }
 ) {
   const params = new URLSearchParams();
-  params.set("make", id);
+  params.set('make', id);
   if (filters?.color) {
-    params.set("color", filters.color);
+    params.set('color', filters.color);
   }
 
   const res = await fetch(
-    `${process.env.API_BASE_PATH}/car?${params.toString()}`,
+    `${process.env.API_BASE_PATH}/car?${params.toString()}`
   );
 
   return res.json();
@@ -28,3 +28,4 @@ export async function getCarById(id: string): Promise<CarEntity | null> {
 
   return res.json();
 }
+
